@@ -10,16 +10,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val subject = "Maths"
-//        var marks = 80
-//        var average = 76.8
-//
-//        Toast.makeText(applicationContext,"I got $marks for $subject . My Average was $average ",Toast.LENGTH_LONG).show()
+        val subject : String
+        var marks : Int
+        var average : Double = 76.8
 
-        val name = "Anushka"
-        var distance = 8
+        val distance : Long = 2341232345678L
+        val temperature : Float = 456.67F
 
-        Toast.makeText(applicationContext," $name ran $distance kilometers today", Toast.LENGTH_LONG).show()
+        val myChar : Char ='a'
+
+        marks = 80
+        subject = "Maths"
+        
+
+
+
+        Toast.makeText(applicationContext,"I got $marks for $subject . My Average was $average ",Toast.LENGTH_LONG).show()
+
 
 
 
