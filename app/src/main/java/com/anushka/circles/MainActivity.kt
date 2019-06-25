@@ -13,22 +13,15 @@ class MainActivity : AppCompatActivity() {
         val subject : String
         var marks : Int
         var average : Double = 76.8
-
-        val distance : Long = 2341232345678L
-        val temperature : Float = 456.67F
-
-        val myChar : Char ='a'
-
         marks = 80
         subject = "Maths"
-        
 
+        Toast.makeText(applicationContext,getMessage(subject,marks,average),Toast.LENGTH_LONG).show()
 
+    }
 
-        Toast.makeText(applicationContext,"I got $marks for $subject . My Average was $average ",Toast.LENGTH_LONG).show()
+    private fun getMessage(mySubject : String, myMarks : Int, myAvg : Double) : String {
 
-
-
-
+        return "I got $myMarks for $mySubject . My Average was $myAvg "
     }
 }
