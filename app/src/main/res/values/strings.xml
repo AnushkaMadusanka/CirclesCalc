@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Circles</string>
+    <string name="find_area">Calculate Area</string>
+    <string name="find_circumference">Calculate Circumference</string>
+    <string name="area_text">Area is</string>
+    <string name="circumference_text">Circumference is</string>
 </resources>
