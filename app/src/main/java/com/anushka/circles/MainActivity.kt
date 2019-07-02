@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
         val circlesCalc = CirclesCalc()
 
+        //calculate circumference
         val circumButton = findViewById<Button>(R.id.circumferenceButton)
         circumButton.setOnClickListener{
 
-          val input = radiusEditText.text.toString()
+            val input = radiusEditText.text.toString()
             val circumference = circlesCalc.getCircumference(input.toDouble())
             introTextView.text = getString(R.string.circumference_text)
             resultTextView.text = circumference.toString().plus(" cm")
