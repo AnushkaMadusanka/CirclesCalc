@@ -20,16 +20,36 @@ class MainActivity : AppCompatActivity() {
 
         //calculate circumference
         val circumButton = findViewById<Button>(R.id.circumferenceButton)
-        circumButton.setOnClickListener{
+        circumButton.setOnClickListener {
 
-            val input = radiusEditText.text.toString()
-            val circumference = circlesCalc.getCircumference(input.toDouble())
-            introTextView.text = getString(R.string.circumference_text)
-            resultTextView.text = circumference.toString().plus(" cm")
+            if(radiusEditText.text.toString().isEmpty()){
 
+                Toast.makeText(this,"Empty radius",Toast.LENGTH_LONG).show()
+            } else {
+
+                val input = radiusEditText.text.toString()
+                val circumference = circlesCalc.getCircumference(input.toDouble())
+                introTextView.text = getString(R.string.circumference_text)
+                resultTextView.text = circumference.toString().plus(" cm")
+
+            }
+        }
+            //calculate area
+            val areaButton = findViewById<Button>(R.id.areaButton)
+            areaButton.setOnClickListener {
+                if(radiusEditText.text.toString().isEmpty()){
+
+                    Toast.makeText(this,"Empty radius",Toast.LENGTH_LONG).show()
+                } else {
+
+                    val input = radiusEditText.text.toString()
+                    val area = circlesCalc.getArea(input.toDouble())
+                    introTextView.text = getString(R.string.area_text)
+                    resultTextView.text = area.toString().plus(" cm\u00B2")
+                }
+
+            }
 
         }
 
     }
-
-}
